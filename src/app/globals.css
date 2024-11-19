@@ -19,3 +19,19 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.item-sidebar{
+  @apply p-2 hover:bg-blue-400 hover:text-white m-1 text-sm h-auto rounded-md flex items-center gap-3
+}
+
+.profileContent{
+  @apply flex flex-row gap-2 py-1
+}
+
+.smallCard{
+  @apply bg-white items-center flex flex-row justify-center gap-4 py-3 uppercase font-bold text-sm
+}
+
+.bank-card{
+  @apply bg-white rounded-md text-center p-2 cursor-pointer
+}
