@@ -52,7 +52,7 @@ export default function BankProduct(){
                 {!highlight ? (
                     <section>
                         <section className='grid grid-cols-1'>
-                            <section className='grid grid-cols-5 gap-10 m-8'>
+                            <section className='grid xs:grid-cols-2 md:grid-cols-5 gap-10 m-8'>
                                 <div className='bank-card'>
                                     <div className='flex justify-center m-4'>
                                         <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
@@ -83,7 +83,7 @@ export default function BankProduct(){
                                     <p>Take Over dan Bridging Loan</p></div>
                             </section>
                         </section>
-                        <section className="flex flex-row mx-8 gap-10 cursor-pointer">
+                        <section className="flex flex-row flex-wrap mx-8 gap-10 cursor-pointer xs:text-xs lg:text-lg">
                             <div className='flex bg-white p-2 rounded-md my-auto'>
                                 <input type="search" name="" id="" placeholder='Cari berdasarkan nama'/>
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#3498eb"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>                     
@@ -98,37 +98,36 @@ export default function BankProduct(){
                             </div>
                             <div className='flex bg-white p-2 rounded-md my-auto cursor-pointer'>
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m80-280 150-400h86l150 400h-82l-34-96H196l-32 96H80Zm140-164h104l-48-150h-6l-50 150Zm328 164v-76l202-252H556v-72h282v76L638-352h202v72H548ZM360-760l120-120 120 120H360ZM480-80 360-200h240L480-80Z"/></svg>
-                                <p className='mx-2 font-bold'>Sort</p>
+                                <p className='mx-2 font-bold my-auto'>Sort</p>
                             </div>
-                            <div className='flex bg-blue-400 text-white p-2 mb-2 rounded-md cursor-pointer'>
+                            <div className='flex bg-blue-400 text-white p-2 rounded-md cursor-pointer'>
                                 <Plus />
-                                <p className='mx-2 font-bold'>Tambah Product</p>
+                                <p className='mx-2 my-auto font-bold'>Tambah Product</p>
                             </div>
                         </section>
                         <section>
                             {ProductBank.map((item, index) => (
                                 <div key={index}>
-                                    <div className="flex flex-row m-8 bg-white p-4 rounded-md shadow-lg">
-                                        <section className='grid grid-cols-2'>
-                                            <div className='col-span-2 m-4'>
+                                    <div className="flex xs:flex-col lg:flex-row m-8 bg-white p-4 rounded-md shadow-lg">
+                                        <section className='xs:flex xs:flex-col md:grid md:grid-cols-2'>
+                                            <div className='xs:col-span-1 md:col-span-2 m-4'>
                                                 <picture className='grid place-content-center'>
                                                     <img className='max-w-48 h-16' src={item.BankImg} alt="" />
                                                 </picture>
                                             </div>
-                                            <div className="text-center px-6 border-r-2 border-gray-400">
-                                                <p>rating : </p>
+                                            <div className="flex items-center justify-center flex-col text-center px-6 md:border-r-2 md:border-gray-400">
+                                                <span>rating : </span>
                                                 <Rating rate={item.Rating} />
-                                                <p className='text-xs font-bold'>{item.Review} Review</p>
-
+                                                <span className='text-xs font-bold flex items-end'>{' '} {item.Review} Review</span>
                                             </div>
-                                            <div className="text-center px-6">
-                                                <p>user : </p>
-                                                <p>{item.Users}</p>
-                                                <p className='text-xs font-bold'>users yearsly</p>
+                                            <div className="flex flex-col items-center text-center px-6 justify-center">
+                                                <span>user :{' '}</span>
+                                                <span>{item.Users}</span>
+                                                <span className='text-xs font-bold flex items-end'>{' '} users yearsly</span>
                                             </div>
                                         </section>
-                                        <section className='grid grid-cols-2 text-sm mx-10'>
-                                            <div className="col-span-2 text-xl my-2">
+                                        <section className='grid grid-cols-2 xs:text-xs md:text-sm mx-10'>
+                                            <div className="col-span-2 xs:text-sm md:text-xl my-2">
                                                 <div><span className='capitalize font-bold'>{item.BankName}{' '}</span><span className='capitalize font-bold text-blue-400'>{item.Additional}</span></div>
                                             </div>
                                             <div className='grid grid-cols-1 gap-3'>
@@ -171,8 +170,8 @@ export default function BankProduct(){
                                                 </div>
                                             </div>
                                         </section>
-                                        <section className='grid place-content-center mx-auto'>
-                                            <div className='border-2 border-gray-200 shadow-lg px-5 py-2 text-center text-blue-400 font-bold cursor-pointer flex justify-center' onClick={()=>{handleDetailButton(item.id)}}>Detail</div>
+                                        <section className='grid place-content-center mx-auto xs:mt-2 lg:mt-0'>
+                                            <div className='xs:text-xs md:text-lg border-2 border-gray-200 shadow-lg px-5 py-2 text-center text-blue-400 font-bold cursor-pointer flex justify-center' onClick={()=>{handleDetailButton(item.id)}}>Detail</div>
                                         </section>
                                     </div>
                                 </div>

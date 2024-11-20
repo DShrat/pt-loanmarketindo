@@ -33,5 +33,5 @@ body {
 }
 
 .bank-card{
-  @apply bg-white rounded-md text-center p-2 cursor-pointer
+  @apply bg-white rounded-md text-center p-2 cursor-pointer xs:text-xs lg:text-lg
 }
