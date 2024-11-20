@@ -4,13 +4,6 @@ import { ChevronDown, ChevronLeft, ChevronRight, Save, User } from "lucide-react
 import Sidebar from "@/app/components/sidebar/page";
 import React from "react";
 import { useState } from "react";
-import { Step, Stepper, Button, Typography } from "@material-tailwind/react";
-
-interface Step {
-    label: string;
-    isCompleted: boolean;
-    isActive: boolean;
-}
 
 export default function EditApplication(){
     const [currentStep, setCurrentStep] = useState(2); // Starting at Alamat (index 2)
@@ -41,10 +34,6 @@ export default function EditApplication(){
         }
     };
     
-    // const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
-    // const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
-
-
     return(
         <main className="grid sm:grid-cols-1 lg:grid-cols-7 bg-gray-200 text-black capitalize">
             <Sidebar/>

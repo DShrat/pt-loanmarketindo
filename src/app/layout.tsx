@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Demo",
+  title: "Demo-LMI",
   description: "create by dshrat",
 };
 
