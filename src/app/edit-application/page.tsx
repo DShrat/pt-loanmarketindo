@@ -1,6 +1,6 @@
 "use client"
 
-import { ChevronDown, ChevronLeft, ChevronRight, Save, User } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight, Save } from "lucide-react";
 import Sidebar from "@/app/components/sidebar/page";
 import React from "react";
 import { useState } from "react";
