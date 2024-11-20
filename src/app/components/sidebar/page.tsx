@@ -27,9 +27,9 @@ export function Sidebar(){
 
     return(
         // <main className="capitalize bg-white">
-        <main className={`fixed cursor-pointer top-0 left-0 h-full bg-white text-black transition-all duration-300 ${
+        <main className={` fixed cursor-pointer top-0 left-0 h-full bg-white text-black transition-all duration-300 ${
             isOpen ? 'w-auto lg:relative' : 'w-0'
-          } overflow-hidden shadow-xl`}>
+          } overflow-hidden shadow-xl`} style={{zIndex:100}}> 
             <button 
                 onClick={() => setIsOpen(!isOpen)}
                 className="fixed top-4 left-4 p-2 rounded-lg bg-white hover:bg-gray-700 transition-colors"

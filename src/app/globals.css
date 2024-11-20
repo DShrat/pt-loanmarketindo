@@ -33,5 +33,64 @@ body {
 }
 
 .bank-card{
-  @apply bg-white rounded-md text-center p-2 cursor-pointer xs:text-xs lg:text-lg
+  @apply bg-white rounded-md text-center p-2 cursor-pointer xs:text-xs lg:text-base
+}
+
+.inputForm{
+  @apply bg-gray-300 rounded-sm p-1 md:col-span-6
+}
+
+.topForm{
+  @apply grid xs:grid-cols-1 md:grid-cols-7 xs:text-xs md:text-sm
+}
+
+.eps-title{
+  @apply font-bold my-1
+}
+
+.eps-titleForm{
+  @apply mb-2
+}
+
+.ea-titleForm{
+  @apply bg-blue-800 text-white pl-2 py-3 font-bold xs:text-sm md:text-base lg:text-lg
+}
+
+.ea-subTitleForm{
+  @apply font-bold my-2 xs:text-sm md:text-base
+}
+
+.ea-formTemp{
+  @apply grid xs:grid-cols-1 lg:grid-cols-2 xs:gap-0 lg:gap-10 p-6 border border-gray-400
+}
+
+.ea-clearButton{
+  @apply p-2 bg-red-600 text-white xs:text-xs md:text-sm
+}
+
+.ea-option{
+  @apply bg-white cursor-pointer w-full xs:text-xs md:text-base
+}
+
+.ea-textInputArea{
+  @apply w-full border border-gray-400 px-3 xs:text-sm md:text-base
+}
+
+@layer components {
+  .stepper{
+    @apply flex relative flex-col justify-center items-center w-full
+  }
+  .stepper:not(:first-child):before{
+    @apply bg-slate-900 absolute right-2/4 top-1/4 translate-y-2/4 w-full h-[3px] content-['']
+  }
+  .step{
+    @apply rounded-full w-5 h-5 items-center flex justify-center z-10 relative bg-slate-700 text-white font-semibold
+  }
+  .complete .step{
+    @apply bg-green-400
+  }
+  .active .step{
+   @apply bg-sky-600
+  }
+ 
 }
