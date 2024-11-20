@@ -307,7 +307,7 @@ export default function Home() {
           </section>
           {/* NOTIFICATION */}
           <section>
-            <div className='bg-white p-6 xs:ml-6 lg:ml-0 xs:mr-6 md:mr-6 xs:mt-0 lg:mt-6'>
+            <div className='bg-white p-6 xs:mx-6 md:mr-6 xs:mt-0 lg:mt-6'>
               <div className='uppercase font-bold xs:text-xs lg:text-sm text-left'>notification</div>
               <section className='flex flex-col'>
                 <div className='xs:flex lg:grid lg:grid-cols-5'>
