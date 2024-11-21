@@ -354,7 +354,6 @@ export default function Home() {
                   <div>
                     <svg width="50" height="auto" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="50" cy="20" r="15" fill="#ccc" />
-                      <line x1="50" y1="40" x2="50" y2="190" stroke="#ccc" strokeWidth="8" />
                     </svg>
                   </div>
                   <div className='col-span-3 pl-5'>
